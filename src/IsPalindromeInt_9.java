@@ -18,6 +18,7 @@ public class IsPalindromeInt_9 {
             numDivisors*= 10;
         }
         System.out.println(numDivisors + " " + x);
+
         while(numDivisors>=1)
         {
             System.out.println(numDivisors + " " + x);

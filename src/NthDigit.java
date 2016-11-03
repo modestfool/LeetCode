@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * @author: basavakanaparthi
  * on 24,Oct,2016 at 2:03 AM.
@@ -29,5 +31,33 @@
  */
 public class NthDigit
 {
+    public static int findNthDigit(int n)
+    {
 
+        if (n < 10)
+            return n;
+        int start = 1;
+        int len = 1;
+        long count = 9;
+        while(n > len*count)
+        {
+            n -= len*count;
+            start *= 10;
+            count *= 10;
+            len++;
+        }
+        start += (n - 1) / len;
+        System.out.println(start + " " + n + " " + len);
+        String s = Integer.toString(start);
+        return Character.getNumericValue(s.charAt((n - 1) % len));
+
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while(true)
+        {
+            System.out.println(findNthDigit(in.nextInt()));
+        }
+    }
 }

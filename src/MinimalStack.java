@@ -42,7 +42,7 @@ class minStack {
 
     public void pop()
     {
-        if (minStack.size() >0 && (stack.get(0).equals(minStack.get(0))))
+        if (!minStack.isEmpty() && (stack.get(0).equals(minStack.get(0))))
             minStack.remove(0);
         stack.remove(0);
     }

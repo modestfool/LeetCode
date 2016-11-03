@@ -34,7 +34,7 @@ public class PascalsTriangleII
                     currRow.add(row.get(j-1) + row.get(j));
                 }
             }
-            //System.out.println(currRow.toString());
+            System.out.println(currRow.toString());
             row = currRow;
             i++;
         }
@@ -43,6 +43,6 @@ public class PascalsTriangleII
     }
 
     public static void main(String[] args) {
-        System.out.println(getRow(1).toString());
+        System.out.println(getRow(10).toString());
     }
 }

@@ -23,7 +23,7 @@ public class JumpGameII_45 {
     {
         int currInd = 0;
         int numSteps = 0;
-        while(currInd < nums.length-1 && currInd >= 0)
+        while(currInd < nums.length-1)
         {
             System.out.println("Current:  " + nums[currInd]);
             int maxDist = -1;

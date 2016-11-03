@@ -39,6 +39,7 @@ public class LRUCache_146
             //System.out.println(key);
             ListNode curr = cacheMap.get(key);
             setHead(curr);
+            printLL();
             return curr.val;
         }
         else
@@ -55,6 +56,7 @@ public class LRUCache_146
             ListNode curr = cacheMap.get(key);
             curr.val = value;
             setHead(curr);
+            printLL();
         }
         else
         {
@@ -63,6 +65,7 @@ public class LRUCache_146
             ListNode newNode = new ListNode(key, value);
             cacheMap.put(key,newNode);
             setHead(newNode);
+            printLL();
         }
         if (head != null)
             System.out.println("Head: " + head.key);
@@ -137,8 +140,8 @@ public class LRUCache_146
             LRUCache_146 lru = new LRUCache_146(1);
             //System.out.println(lru.get(1));
             lru.set(2, 1);
-            //lru.set(2, 11);
-            //lru.set(3, 12);
+            lru.set(2, 11);
+            lru.set(3, 12);
 
             System.out.println(lru.get(2));
             lru.set(3, 2);
